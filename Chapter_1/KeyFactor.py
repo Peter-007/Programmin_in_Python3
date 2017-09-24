@@ -44,7 +44,7 @@ def Piece3_CollectionDataTypes():
 # 关键要素4:逻辑运算符
 def Pieces4_LogicalOperations():
 
-    # Identity Operator
+    # 身份操作符：Identity Operator
     a = ['jack', 'tom']
     b = ['jack', 'tom']
     print(a is b)   # False
@@ -54,25 +54,67 @@ def Pieces4_LogicalOperations():
 
     x = 'some'
     y = None
-    print(x is not None, y is None)
+    print('Identity operator', x is not None, y is None)
 
-    # Comparison Operators
+    # 比较操作符：Comparison Operators
     a = 2
     b = 6
     print(a == b,
           a < b, a <= b,
           a > b, a >= b,
           a != b)
-
+    # compare string
     name1 = 'jack'
     name2 = 'jack'
     name3 = 'jack '  #多了一个空格
-    print(name1 is name2, name1 == name2, name1 == name3.strip())
+    print('compare string', name1 is name2, name1 == name2, name1 == name3.strip())
 
+    score = 86
+    print( 'chained compare', 60 < score < 90)
 
+    # 成员操作符：membership Operator
+    p = ('one',1,'abc')
+    print('membership operaor1', 1 in p, 'on' in p)
+
+    str1 = 'The membership operator'
+    print('membership operaor2', 'ship' in str1)
+
+    #逻辑运算符：and, or, not
+    a1 = 5
+    a2 = 2
+    a3 = 0
+    print('Logical operator1', a1 and a2, a2 and a1, a1 or a2, a2 or a1)
+    print('Logical operator2', a1 and a3, a3 and a1, a1 or a3, a3 or a1)
+    print('Logical operator3', not a1, not a2, not a3)
+
+# 关键要素5:控制流语句
+def Piece5_ControlFlowStatements():
+    lines = 1800
+    if lines < 1000:
+        print('small')
+    elif lines < 5000:
+        print('medium')
+    else:
+        print('large')
+
+    i = 0
+    while i < 10:
+        i += 1
+        if 4 < i < 7:
+            continue
+        print('while i=%d' % i)
+
+    else:
+        print('while is end')
+
+    for j in range(10):
+        print('for i=%d' % j)
+    else:
+        print('for end')
 
 
 Piece1_DataTypes()
 Piece2_ObjectReferences()
 Piece3_CollectionDataTypes()
 Pieces4_LogicalOperations()
+Piece5_ControlFlowStatements()
