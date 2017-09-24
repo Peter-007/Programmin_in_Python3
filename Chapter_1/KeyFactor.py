@@ -42,7 +42,7 @@ def Piece3_CollectionDataTypes():
     print(b)
 
 # 关键要素4:逻辑运算符
-def Pieces4_LogicalOperations():
+def Piece4_LogicalOperations():
 
     # 身份操作符：Identity Operator
     a = ['jack', 'tom']
@@ -116,5 +116,5 @@ def Piece5_ControlFlowStatements():
 Piece1_DataTypes()
 Piece2_ObjectReferences()
 Piece3_CollectionDataTypes()
-Pieces4_LogicalOperations()
+Piece4_LogicalOperations()
 Piece5_ControlFlowStatements()
