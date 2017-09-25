@@ -8,7 +8,8 @@
 def Piece1_DataTypes():
     # int的大小中取决于内存，可以表示很大的数
     # 2的217次方，pow(2,217)
-    bigNumber = 210624583337114373395836055367340864637790190801098222508621955072L
+    bigNumber = 210624583337114373395836055367340864637790190801098222508621955072
+    print(bigNumber)
 
     # 类型转换
     x = int("45 ")
@@ -97,6 +98,7 @@ def Piece5_ControlFlowStatements():
     else:
         print('large')
 
+    # while
     i = 0
     while i < 10:
         i += 1
@@ -107,14 +109,36 @@ def Piece5_ControlFlowStatements():
     else:
         print('while is end')
 
+    # for ... in
     for j in range(10):
         print('for i=%d' % j)
     else:
         print('for end')
 
+    for letter in 'abcdef':
+        print('letter', letter)
 
-Piece1_DataTypes()
-Piece2_ObjectReferences()
-Piece3_CollectionDataTypes()
-Piece4_LogicalOperations()
-Piece5_ControlFlowStatements()
+    # 异常处理
+    # s = input('Enter an integer:')
+    s = '3.5'
+    try:
+        n = int(s)
+        print('Valid integer entered:', n)
+    except ValueError as err:
+        print('exception message:',err)
+
+def Piece6_ArithmeticOperator():
+    names = ['jack','rose']
+    names += 'tom'
+    names += ['peter']
+    print(names)
+
+
+
+lstFunc = [Piece1_DataTypes,
+        Piece2_ObjectReferences,
+        Piece3_CollectionDataTypes,
+        Piece4_LogicalOperations,
+        Piece5_ControlFlowStatements,
+        Piece6_ArithmeticOperator]
+lstFunc[5]()
