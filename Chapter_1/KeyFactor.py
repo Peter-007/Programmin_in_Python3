@@ -118,6 +118,9 @@ def Piece5_ControlFlowStatements():
     for letter in 'abcdef':
         print('letter', letter)
 
+    for _ in range(3):
+        print('Hello')
+
     # 异常处理
     # s = input('Enter an integer:')
     s = '3.5'
@@ -127,18 +130,48 @@ def Piece5_ControlFlowStatements():
     except ValueError as err:
         print('exception message:',err)
 
+# 关键要素6: 运算符
 def Piece6_ArithmeticOperator():
+    # 固定对象＋＝：新创建对象
+    a = 5    # 5是一个新的int对象
+    a += 3   # 8也是新创建的一个int对象，5将被垃圾回收
+    print(a)
+
+    print('5/3=', 5/3, '5//3=', 5//3)
+
+    # 可变对象＝＋＝：改变原始对象信息
     names = ['jack','rose']
     names += 'tom'
     names += ['peter']
     print(names)
 
+def Piece7_InputOutput():
+    count = total = 0
+
+    while True:
+        s = input('Enter a integer:')
+        if s:
+            try:
+                n = int(s)
+                total += n
+                count += 1
+            except ValueError as err:
+                print(err)
+                continue
+        else:
+            break
+
+    if count:
+        print('count=%d' % count, 'total=%d' % total)
+
+
 
 
 lstFunc = [Piece1_DataTypes,
-        Piece2_ObjectReferences,
-        Piece3_CollectionDataTypes,
-        Piece4_LogicalOperations,
-        Piece5_ControlFlowStatements,
-        Piece6_ArithmeticOperator]
-lstFunc[5]()
+           Piece2_ObjectReferences,
+           Piece3_CollectionDataTypes,
+           Piece4_LogicalOperations,
+           Piece5_ControlFlowStatements,
+           Piece6_ArithmeticOperator,
+           Piece7_InputOutput]
+lstFunc[4]()
